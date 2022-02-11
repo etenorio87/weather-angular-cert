@@ -1,0 +1,27 @@
+<div class="form-group mb-2 text-right row">
+    <label class="col-sm-2 col-form-label">Country:</label>
+    <div class="col-sm-10">
+        <select name="country" class="form-control" (change)="onCountryChange($any($event.target).value)">
+            <option value="es" [selected]="'es' === selectedCountry">Spain</option>
+            <option value="us" [selected]="'us' === selectedCountry">USA</option>
+            <option value="it" [selected]="'it' === selectedCountry">Italy</option>
+        </select>
+    </div>
+</div>
+
+<form [formGroup]="locationForm" (ngSubmit)="onFormSubmit()">
+    <div class="jumbotron">
+        <div class="row">
+
+            <div class="col">
+                <h2>Enter a zipcode:</h2>
+                <input class="form-control" placeholder="Zipcode" type="text" formControlName="zipCode">
+            </div>
+        </div>
+        <div class="mt-2">
+            <button class="btn btn-primary" type="submit" [disabled]="locationForm.invalid">
+                Add location
+            </button>
+        </div>
+    </div>
+</form>

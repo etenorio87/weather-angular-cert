@@ -1,0 +1,18 @@
+.forecast-list {
+    display: flex;
+    gap: 1rem;
+}
+.forecast-day {
+    position: relative;
+    border: 1px solid #cccccc;
+    padding: .1rem .5rem;
+    width: 8.5rem;
+}
+@media (max-width: 700px) {
+    .forecast-list {
+        flex-direction: column;
+    }
+    .forecast-day {
+        max-width: 10rem;
+    }
+}

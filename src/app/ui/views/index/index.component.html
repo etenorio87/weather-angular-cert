@@ -1,0 +1,16 @@
+<section>
+    <div class="container-fluid">
+        <app-location-form></app-location-form>
+    </div>
+</section>
+
+<main>
+    <div class="container-fluid">
+        <ng-container *ngFor="let code of zipCodes">
+            <app-weather-result [zipCode]="code"
+                                (onRemove)="onZipcodeRemove($event)">
+            </app-weather-result>
+        </ng-container>
+    </div>
+</main>
+

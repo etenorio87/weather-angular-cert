@@ -1,0 +1,29 @@
+/* Add application styles & imports to this file! */
+.jumbotron {
+    padding: 2rem 1rem !important;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+body {
+  padding-top: 10px;
+}
+
+span.close {
+    cursor: pointer; 
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
